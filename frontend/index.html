@@ -21,24 +21,37 @@
     </div>
     <main id="medicineContent">
     </main>
-    <main id="addNewMedicine">
-        <button class="addMedicine" onclick="openForm()">Add New Medicine</button>
+    <main id="editMedicines">
+        <button class="editMedicine" onclick="openAddForm()">Add New Medicine</button>
+        <button class="editMedicine" onclick="openDelForm()">Delete A Medicine</button>
     </main>
 
-    <div id="form-popup">
-        <form id="form">
-          <h1>New Medicine</h1>
+    <div id="addForm-popup">
+        <form id="addForm">
+            <h1>New Medicine</h1>
       
-          <label><b>Name</b></label>
-          <input id="addMedName" type="text" placeholder="Enter Medicine Name" name="name" required>
+            <label><b>Name</b></label>
+            <input id="addMedName" type="text" placeholder="Enter Medicine Name" name="name" required>
       
-          <label><b>Price</b></label>
-          <input id="addMedPrice" type="number" step="any" placeholder="Enter Medicine Price" name="price" required>
+            <label><b>Price</b></label>
+            <input id="addMedPrice" type="number" step="any" placeholder="Enter Medicine Price" name="price" required>
       
-          <button type="button" class="addBtn" onclick="addMedicine()">Add</button>
-          <button type="button" class="cancelBtn" onclick="closeForm()">Close</button>
+            <button type="button" class="addBtn" onclick="addMedicine()">Add</button>
+            <button type="button" class="cancelAddBtn" onclick="closeAddForm()">Close</button>
         </form>
-      </div>
+    </div>
+
+    <div id="delForm-popup">
+        <form id="delForm">
+            <h1>Delete A Medicine</h1>
+      
+            <label><b>Name</b></label>
+            <input id="delMedName" type="text" placeholder="Enter Medicine Name" name="name" required>
+      
+            <button type="button" class="delBtn" onclick="deleteMedicine()">Delete</button>
+            <button type="button" class="cancelDelBtn" onclick="closeDelForm()">Close</button>
+        </form>
+    </div>
 
     <template id="medicineTemplate">
         <div class="info">

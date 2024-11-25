@@ -40,7 +40,7 @@ async function fetchMedicine() {
 // POST FUNCTIONS
 async function addMedicine() {
     try{
-        const addForm = document.getElementById("form");
+        const addForm = document.getElementById("addForm");
         const addFormData = new FormData(addForm);
         console.log(addFormData.get('price'));
 
@@ -53,7 +53,29 @@ async function addMedicine() {
             throw new Error("Could not post form");
         }
         displayMedicines();
-        closeForm();
+        closeAddForm();
+        return response.json();
+    }
+    catch(error){
+        console.error(error);
+    }
+}
+
+async function deleteMedicine() {
+    try{
+        const delForm = document.getElementById("delForm");
+        const delFormData = new FormData(delForm);
+
+        const response = await fetch("http://localhost:8000/delete", {
+            method: "DELETE",
+            body: delFormData,
+        });
+
+        if(!response.ok){
+            throw new Error("Could not post form");
+        }
+        displayMedicines();
+        closeDelForm();
         return response.json();
     }
     catch(error){
@@ -82,6 +104,7 @@ function displayMedicine(data) {
     const main = document.getElementById("medicineContent");
     const template = document.getElementById("medicineTemplate");
     const content = template.content.cloneNode(true);
+    const div = document.getElementsByClassName("info");
     const medName = Object.values(data)[0];
     const medPrice = Object.values(data)[1];
     
@@ -99,7 +122,6 @@ function displayMedicine(data) {
 
     main.appendChild(content);
 }
-
 
 // FRONTEND BUTTON FUNCTIONS
 async function searchMedicine() {
@@ -120,10 +142,18 @@ function clearSearch() {
     displayMedicines();
 }
 
-function openForm() {
-    document.getElementById("form-popup").style.display = "block";
+function openAddForm() {
+    document.getElementById("addForm-popup").style.display = "block";
   }
   
-function closeForm() {
-    document.getElementById("form-popup").style.display = "none";
+function closeAddForm() {
+    document.getElementById("addForm-popup").style.display = "none";
   }
+
+function openDelForm() {
+    document.getElementById("delForm-popup").style.display = "block";
+}
+  
+function closeDelForm() {
+    document.getElementById("delForm-popup").style.display = "none";
+}
