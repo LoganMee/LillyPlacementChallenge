@@ -13,6 +13,8 @@ Utilised a tutorials on:
 * HTML Templates - To learn to use them for the first time to creating this project
 * Async JavaScript functions - To recap my knowledge on how to best error handle fetch functions
 
+Utilised Postman to test API responses.
+
 ## Objectives - Innovative Solutions
 
 * Utilised HTML Templates to Efficiently create dynamic elements to display medicines 
@@ -25,14 +27,15 @@ Attempted addition of Deletion functionality multiple times due to problems with
 ## Problems Faced
 Had multiple problems due to not taking into account my Async JavaScript functions:
 * Returned promise objects instead of waiting for a real Object to return
+
 Watched a video and learnt how to properly utilise Asyncs with fetch requests.
 
 Had to change the way I implemented the delete functionality due to problems with using templates to dynamically add buttons. Button assigned functions would not be called due to the buttons being generated dynamically. Tried adding dynamic delete buttons through JavaScript manually and tried to use EventListener to replace onclick, neither or which worked. Due to running out of time I reused the pre-existing form functionality from adding medicines and repurposed it for deletions.
 
 ## Evaluation
-Felt the challenge went really well overall. 
+Felt the challenge was very enjoyable went really well overall. 
 
-It was my first time interfacing with an API using JavaScript as I usually use Python for most personal projects but I easily worked out how to interact with the API.
+It was my first time interfacing with an API using JavaScript as I usually use Python for most personal projects but I easily worked out how to interact with the API. I think i have learnt alot about using JavaScript with APIs which im sure will be useful in the future.
 
 If I had more time I would have:
 * Found a way to enable dynamic interactable buttons on each medicine element to enable quicker and more user friendly deletion/interaction.
