@@ -10,24 +10,32 @@
     <div class="disclaimer" id="disclaimer">
         Disclaimer: All medicine names and prices used in this application are fictional and do not represent any real medicine(s).
     </div>
+
     <header>
         <h1>Medicine Tracker</h1>
         <p id="by">By Logan Mee</p>
     </header>
+
+    <!-- Search Functions -->
     <div id="Inputs">
         <input type="text" id="medicineName" placeholder="Enter Medicine Name">
         <button onclick="searchMedicine()">Find Medicine</button>
         <button onclick="clearSearch()">Clear Search Results</button>
     </div>
+
+    <!-- Where Medicines Will Be Displayed -->
     <main id="medicineContent">
     </main>
+
+    <!-- Add & Delete Buttons -->
     <main id="editMedicines">
-        <button class="editMedicine" onclick="openAddForm()">Add New Medicine</button>
-        <button class="editMedicine" onclick="openDelForm()">Delete A Medicine</button>
+        <button class="editMedicine" onclick="openAddForm()">Add Medicine</button>
+        <button class="editMedicine" onclick="openDelForm()">Delete Medicine</button>
     </main>
 
-    <div id="addForm-popup">
-        <form id="addForm">
+    <!-- Popup Forms -->
+    <div id="addForm-popup" class="formDiv">
+        <form id="addForm" class="form">
             <h1>New Medicine</h1>
       
             <label><b>Name</b></label>
@@ -37,22 +45,23 @@
             <input id="addMedPrice" type="number" step="any" placeholder="Enter Medicine Price" name="price" required>
       
             <button type="button" class="addBtn" onclick="addMedicine()">Add</button>
-            <button type="button" class="cancelAddBtn" onclick="closeAddForm()">Close</button>
+            <button type="button" class="cancelBtn" onclick="closeAddForm()">Close</button>
         </form>
     </div>
 
-    <div id="delForm-popup">
-        <form id="delForm">
+    <div id="delForm-popup" class="formDiv">
+        <form id="delForm" class="form">
             <h1>Delete A Medicine</h1>
       
             <label><b>Name</b></label>
             <input id="delMedName" type="text" placeholder="Enter Medicine Name" name="name" required>
       
             <button type="button" class="delBtn" onclick="deleteMedicine()">Delete</button>
-            <button type="button" class="cancelDelBtn" onclick="closeDelForm()">Close</button>
+            <button type="button" class="cancelBtn" onclick="closeDelForm()">Close</button>
         </form>
     </div>
 
+    <!-- Medicine Template -->
     <template id="medicineTemplate">
         <div class="info">
             <h2 class="medName"></h2>

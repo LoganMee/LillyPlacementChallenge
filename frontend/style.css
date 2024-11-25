@@ -29,6 +29,7 @@ body {
     height: 30px;
 }
 
+
 /* ---- Your custom styles below ---- */
 header {
     display: flex;
@@ -43,11 +44,11 @@ header {
 }
 
 #Inputs {
-    font-family: Arial;
     color: #212121;
     margin: 10px;
 }
 
+/* --- Search Box --- */
 #medicineName {
     width: 450px;
     box-sizing: border-box;
@@ -58,6 +59,7 @@ header {
     transition: width 0.4s ease-in-out;
 }
 
+/* --- Default Button Style --- */
 button {
     box-sizing: border-box;
     border: 2px solid #ccc;
@@ -71,6 +73,7 @@ button:hover {
     box-shadow: 0 0 11px rgba(33,33,33,.2); 
 }
 
+/* --- Add & Delete Buttons --- */
 .editMedicine {
     display: inline-block;
     transition: box-shadow .3s;
@@ -82,10 +85,7 @@ button:hover {
     background: #fff;
 }
 
-.editMedicine:hover {
-    box-shadow: 0 0 11px rgba(33,33,33,.2); 
-  }
-
+/* --- Medicines --- */
 .info {
     display: inline-block;
     transition: box-shadow .3s;
@@ -99,25 +99,26 @@ button:hover {
 
 .info:hover {
     box-shadow: 0 0 11px rgba(33,33,33,.2); 
-  }
+}
 
 .medName {
-    font-family: Arial;
     color: #212121;
     padding-left: 10px;
 }
 
 .medPrice {
-    font-family: Arial;
     font-weight: bold;
     color: #d62718;
     padding-left: 10px;
 }
 
 
+/* --- Both Popup Forms --- */
+.cancelBtn {
+    float: right;
+}
 
-/* The popup form - hidden by default */
-#addForm-popup {
+.formDiv {
     display: none;
     position: absolute;
     top: 50%;
@@ -128,14 +129,13 @@ button:hover {
     z-index: 9;
 }
 
-/* Add styles to the form container */
-#addForm {
+.form {
     max-width: 300px;
     padding: 10px;
     background-color: white;
 }
 
-/* Full-width input fields */
+/* --- Add Popup Form --- */
 #addForm input[type=text], #addForm input[type=number] {
     width: 100%;
     padding: 15px;
@@ -144,39 +144,11 @@ button:hover {
     background: #f1f1f1;
 }
 
-.cancelAddBtn {
-    float: right;
-}
-
-
-/* The popup form - hidden by default */
-#delForm-popup {
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    border-radius: 10px;
-    border: 5px solid #d62718;
-    z-index: 9;
-}
-
-/* Add styles to the form container */
-#delForm {
-    max-width: 300px;
-    padding: 10px;
-    background-color: white;
-}
-
-/* Full-width input fields */
+/* --- Delete Popup Form --- */
 #delForm input[type=text] {
     width: 100%;
     padding: 15px;
     margin: 5px 0 22px 0;
     border: none;
     background: #f1f1f1;
-}
-
-.cancelDelBtn {
-    float: right;
 }

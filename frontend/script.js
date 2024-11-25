@@ -61,6 +61,7 @@ async function addMedicine() {
     }
 }
 
+// DELETE FUNCTIONS
 async function deleteMedicine() {
     try{
         const delForm = document.getElementById("delForm");
@@ -123,6 +124,7 @@ function displayMedicine(data) {
     main.appendChild(content);
 }
 
+
 // FRONTEND BUTTON FUNCTIONS
 async function searchMedicine() {
     const medicineName = document.getElementById("medicineName").value;
@@ -144,16 +146,14 @@ function clearSearch() {
 
 function openAddForm() {
     document.getElementById("addForm-popup").style.display = "block";
-  }
-  
+}
 function closeAddForm() {
     document.getElementById("addForm-popup").style.display = "none";
-  }
+}
 
 function openDelForm() {
     document.getElementById("delForm-popup").style.display = "block";
 }
-  
 function closeDelForm() {
     document.getElementById("delForm-popup").style.display = "none";
 }
