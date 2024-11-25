@@ -12,10 +12,24 @@
     </div>
     <header>
         <h1>Medicine Tracker</h1>
+        <p id="by">By Logan Mee</p>
     </header>
-    <main>
+    <div id="Inputs">
+        <input type="text" id="medicineName" placeholder="Enter Medicine Name">
+        <button onclick="searchMedicine()">Find Medicine</button>
+        <button onclick="clearSearch()">Clear Search Results</button>
+    </div>
+    <main id="medicineContent">
 
     </main>
+        
+    <template id="medicineTemplate">
+        <div class="info">
+            <h2 class="medName"></h2>
+            <p class="medPrice"></p>
+        </div>
+    </template>
+
     <script src="script.js"></script>
 </body>
 </html>

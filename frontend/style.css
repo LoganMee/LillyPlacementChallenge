@@ -15,6 +15,75 @@ body {
     padding-top: 30px;
 }
 
+header {
+    display: flex;
+    align-items: baseline;
+    color: #212121;
+    margin: 10px;
+}
+
+#by {
+    font-size: 10px;
+    margin: 7px;
+}
+
+#Inputs {
+    font-family: Arial;
+    color: #212121;
+    margin: 10px;
+}
+
+#medicineName {
+    width: 450px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 5px;
+    transition: width 0.4s ease-in-out;
+}
+
+button {
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 5px;
+    transition: width 0.4s ease-in-out;
+}
+
+button:hover {
+    box-shadow: 0 0 11px rgba(33,33,33,.2); 
+}
+
+.info {
+    display: inline-block;
+    transition: box-shadow .3s;
+    width: 300px;
+    height: auto;
+    margin: 5px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+
+.info:hover {
+    box-shadow: 0 0 11px rgba(33,33,33,.2); 
+  }
+
+.medName {
+    font-family: Arial;
+    color: #212121;
+    padding-left: 10px;
+}
+
+.medPrice {
+    font-family: Arial;
+    font-weight: bold;
+    color: #d62718;
+    padding-left: 10px;
+}
+
 /* Disclaimer styles. DO NOT REMOVE OR EDIT UNLESS ABSOLUTELY NECESSARY */
 .disclaimer {
     position: fixed;
