@@ -117,7 +117,7 @@ button:hover {
 
 
 /* The popup form - hidden by default */
-.form-popup {
+#form-popup {
     display: none;
     position: absolute;
     top: 50%;
