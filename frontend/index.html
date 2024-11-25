@@ -20,9 +20,26 @@
         <button onclick="clearSearch()">Clear Search Results</button>
     </div>
     <main id="medicineContent">
-
     </main>
-        
+    <main id="addNewMedicine">
+        <button class="addMedicine" onclick="openForm()">Add New Medicine</button>
+    </main>
+
+    <div class="form-popup">
+        <form id="form">
+          <h1>New Medicine</h1>
+      
+          <label><b>Name</b></label>
+          <input id="addMedName" type="text" placeholder="Enter Medicine Name" name="name" required>
+      
+          <label><b>Price</b></label>
+          <input id="addMedPrice" type="number" step="any" placeholder="Enter Medicine Price" name="price" required>
+      
+          <button type="button" class="addBtn" onclick="addMedicine()">Add</button>
+          <button type="button" class="cancelBtn" onclick="closeForm()">Close</button>
+        </form>
+      </div>
+
     <template id="medicineTemplate">
         <div class="info">
             <h2 class="medName"></h2>

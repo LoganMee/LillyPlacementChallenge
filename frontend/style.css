@@ -15,6 +15,21 @@ body {
     padding-top: 30px;
 }
 
+/* Disclaimer styles. DO NOT REMOVE OR EDIT UNLESS ABSOLUTELY NECESSARY */
+.disclaimer {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    z-index: 1000;
+    font-weight: bold;
+    height: 30px;
+}
+
+/* ---- Your custom styles below ---- */
 header {
     display: flex;
     align-items: baseline;
@@ -56,6 +71,21 @@ button:hover {
     box-shadow: 0 0 11px rgba(33,33,33,.2); 
 }
 
+.addMedicine {
+    display: inline-block;
+    transition: box-shadow .3s;
+    width: 300px;
+    height: 100px;
+    margin: 5px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+
+.addMedicine:hover {
+    box-shadow: 0 0 11px rgba(33,33,33,.2); 
+  }
+
 .info {
     display: inline-block;
     transition: box-shadow .3s;
@@ -84,18 +114,36 @@ button:hover {
     padding-left: 10px;
 }
 
-/* Disclaimer styles. DO NOT REMOVE OR EDIT UNLESS ABSOLUTELY NECESSARY */
-.disclaimer {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 0.5rem;
-    z-index: 1000;
-    font-weight: bold;
-    height: 30px;
+
+
+/* The popup form - hidden by default */
+.form-popup {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    border: 5px solid #d62718;
+    z-index: 9;
 }
 
-/* ---- Your custom styles below ---- */
+/* Add styles to the form container */
+#form {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+}
+
+/* Full-width input fields */
+#form input[type=text], #form input[type=number] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+.cancelBtn {
+    float: right;
+}

@@ -37,6 +37,30 @@ async function fetchMedicine() {
     }
 }
 
+// POST FUNCTIONS
+async function addMedicine() {
+    try{
+        const addForm = document.getElementById("form");
+        const addFormData = new FormData(addForm);
+        console.log(addFormData.get('price'));
+
+        const response = await fetch("http://localhost:8000/create", {
+            method: "POST",
+            body: addFormData,
+        });
+
+        if(!response.ok){
+            throw new Error("Could not post form");
+        }
+        displayMedicines();
+        closeForm()
+        return response.json();
+    }
+    catch(error){
+        console.error(error);
+    }
+}
+
 
 // FRONTEND DISPLAY FUNCTIONS
 function clearMedicines(){
@@ -95,3 +119,11 @@ function clearSearch() {
     clearMedicines();
     displayMedicines();
 }
+
+function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+  
+function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
